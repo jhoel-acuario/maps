@@ -1,0 +1,31 @@
+<div class="row mt-3">
+  <div class="col-2"></div>
+  <div class="col">
+    <h3 class="text-center">Lista de Propiedades</h3>
+    <hr />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col">
+    <div class="row">
+      <div *ngFor="let house of houses" class="col-4 mb-2">
+        <div class="card">
+          <!-- <img src="" alt="" class="card-img-top"> -->
+          <app-mini-map
+            [lngLat]="house.lngLat"
+            class="card-img-top"
+          ></app-mini-map>
+          <div class="card-body">
+            <h5 class="card-title">{{ house.title }}</h5>
+            <p class="card-text">{{ house.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="div-col-4 mb-2">
+        <counter-alone [counter]="100"></counter-alone>
+      </div>
+    </div>
+  </div>
+</div>
